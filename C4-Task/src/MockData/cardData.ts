@@ -19,13 +19,13 @@ export const cardData: {
   ...Array(10).fill({
     image: "src/Images/watch3.jpeg",
     title: "Rolex",
-    description: "Exclusive wrist watch for the chose few.",
+    description: "Exclusive wrist watch for the chosen few.",
     price: "$4700",
   }),
   ...Array(5).fill({
     image: "src/Images/watch3.jpeg",
     title: "Rolex",
-    description: "Exclusive wrist watch for the chose few.",
+    description: "Exclusive wrist watch for the chosen few.",
     price: "$4700",
   }),
 ];
