@@ -1,0 +1,16 @@
+.container{
+    margin: 0px;
+    width: 100vw;
+    height: 30px;
+    background-color: var(--darkGray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}

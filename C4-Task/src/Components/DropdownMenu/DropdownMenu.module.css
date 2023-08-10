@@ -1,0 +1,27 @@
+.dropdownMenu {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 25vw;
+  height: 100vh;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+.filter {
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.filter:hover {
+  cursor: pointer;
+  color: var(--lightBlue);
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .dropdownMenu {
+    width: 40vw;
+  }
+}

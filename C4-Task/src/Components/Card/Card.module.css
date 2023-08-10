@@ -1,0 +1,54 @@
+.container {
+  background-color: gray;
+  width: 200px;
+  height: 300px;
+  margin-left: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--boxShadow);
+}
+
+.image {
+  width: 100%;
+  margin: 0;
+  height: 150px;
+  background-color: black;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.title {
+  padding-left: 5px;
+  margin: 0;
+}
+
+.description {
+  padding-left: 5px;
+  margin: 0;
+}
+
+.price {
+  padding-left: 5px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 150px;
+    height: 250px;
+    margin-left: 4px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .title {
+    font: 20px;
+  }
+
+  .description {
+    font: 10px;
+  }
+}
