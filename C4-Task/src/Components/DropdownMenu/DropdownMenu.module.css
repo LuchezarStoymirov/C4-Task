@@ -11,6 +11,7 @@
 
 .filter {
   list-style: none;
+  padding-top: 10px;
   transition: all 0.3s ease;
 }
 
