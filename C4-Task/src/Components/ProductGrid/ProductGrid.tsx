@@ -36,7 +36,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
     };
 
     window.addEventListener("resize", updateSpacing);
-    updateSpacing(); // Run once on mount
+    updateSpacing(); 
 
     return () => {
       window.removeEventListener("resize", updateSpacing);
@@ -47,9 +47,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
     let data = cardData;
 
     if (search) data = data.filter((card) => card.title.includes(search));
-
     if (filter) data = data.filter((card) => card.title === filter);
-
     if (sort === "asc")
       data = data.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
     if (sort === "desc")
@@ -58,11 +56,22 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
     setFilteredData(data);
   }, [filter, sort, search]);
 
-  const createCard = (card: CardData, index: number) => (
-    <Grid key={index} item xs={6} md={2.4}>
-      <Card card={card} />
-    </Grid>
-  );
+  const createCard = (card: CardData, index: number) => {
+    const rowIdx = Math.floor(index / (window.innerWidth < 768 ? 2 : 5));
+    const animationDelay = `${rowIdx * 0.2}s`; // Adjust the multiplier to change the delay between rows
+    return (
+      <Grid
+        key={index}
+        item
+        xs={6}
+        md={2.4}
+        style={{ animationDelay }}
+        className={style["fade-in"]}
+      >
+        <Card card={card} />
+      </Grid>
+    );
+  };
 
   return (
     <div className={style.container}>

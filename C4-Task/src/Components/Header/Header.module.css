@@ -1,9 +1,19 @@
+@keyframes slideHeader {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .container {
   background-color: var(--darkGray);
   margin: 0;
   height: 90px;
   max-width: 100vw;
   backdrop-filter: blur(10px);
+  animation: slideHeader 0.5s ease-out forwards;
 }
 
 .logo {
